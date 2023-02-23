@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 1fr 4fr 1fr;
+    background-color: lightblue;
+}
+
+#popUpStart {
+display: block;
+background-color: #1e293b;
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(16, 13, 60, 0.75); /* Black w/ opacity */
+font-size: 40px;
+color: aqua;
+font-size: 75px;
+text-shadow: white 2px 3px ;
+opacity: 1;
+}
+
+img {
+    height: 100px;
+    position: absolute;
+    padding-left: 15px;
+    padding-top: 25px;
+    z-index: 9999;
+    transform: perspective(100px) rotate(350deg) ;
+}
+
+img:hover {
+    transform: scale(1) perspective(200px) rotate(320deg) ;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 1/2;
+    width: 100vw;
+    color: white;
+    font-size: 30px;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.scoreBoard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 2/3;
+    width: 100vw;
+    justify-items: center ;
+    column-gap:35%;
+    align-items: center;
+}
+.scores{
+    background-color: dodgerblue;
+    height: 5vh;
+    width: 3vw;
+}
+.gameBody {
+    display: grid;
+    grid-row: 3/4;
+}
+
+.gameBoard {
+    height: 40vh;
+    width: 40vw;
+    justify-self: center;
+    align-self: center;
+    background-color: dodgerblue;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    gap:1px;
+    padding:1px ;
+}
+
+.gameField{
+    display: grid;
+    background-color: aqua;
+}
+
+.prompt {
+    display: grid;
+    grid-row: 4/5;
+    color: white;
+    justify-items: center;
+    font-size: 20px ;
+}
+
+#popUpEnd {
+    visibility: hidden;
+    display: grid;
+    background-color: #1e293b;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(16, 13, 60, 0.75); /* Black w/ opacity */
+    font-size: 40px;
+    color: aqua;
+    font-size: 75px;
+    text-shadow: white 2px 3px ;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+#popUpEnd>h2 {
+    height: 100px;
+} 
+
+#popUpEnd>button {
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    color: dodgerblue;
+    background-color: aliceblue;
+    border-radius: 15px;
+}
