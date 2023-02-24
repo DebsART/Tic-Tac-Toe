@@ -49,7 +49,7 @@ const gameBoard = (() => {
             gameField[i].addEventListener('click', () => {
                 if(gameField[i].textContent == " "){
                     gameField[i].innerHTML = "X";
-                    gamefield[i].classList.toggle(`${player.symbol}`);
+                    gameField[i].classList.toggle(`${player.symbol}`);
                     board.push(player.symbol);
                     turn++
                 }
@@ -61,7 +61,7 @@ const gameBoard = (() => {
                 computerPlay = Math.floor(math.random()* gameField.length)
                 gameField[computerPlay].innerHTML = "O";
                 board.push(aiPlayer.symbol);
-                gamefield[i].classList.toggle(`${aiPlayer.symbol}`);
+                gameField[i].classList.toggle(`${aiPlayer.symbol}`);
             }
     };
         
