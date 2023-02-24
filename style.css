@@ -90,6 +90,11 @@ img:hover {
     background-color: aqua;
 }
 
+.gameBody>.gameBoard>.gameField {
+    color: white;
+    font-size: 20px;
+}
+
 .prompt {
     display: grid;
     grid-row: 4/5;
