@@ -29,6 +29,7 @@ text-shadow: white 2px 3px ;
 opacity: 1;
 }
 
+
 img {
     height: 100px;
     position: absolute;
@@ -65,17 +66,20 @@ img:hover {
 }
 .scores{
     background-color: dodgerblue;
-    height: 5vh;
-    width: 3vw;
+    color: white;
+    font-size: 20px;
+    height: 8vh;
+    width: 5vw;
 }
 .gameBody {
     display: grid;
     grid-row: 3/4;
 }
 
+
 .gameBoard {
-    height: 40vh;
-    width: 40vw;
+    height: 50vh;
+    width: 50vw;
     justify-self: center;
     align-self: center;
     background-color: dodgerblue;
@@ -83,16 +87,22 @@ img:hover {
     grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
     gap:1px;
     padding:1px ;
+
+    
 }
 
 .gameField{
     display: grid;
     background-color: aqua;
-}
+    text-align: center;
+  }
 
-.gameBody>.gameBoard>.gameField {
+.gameBody>.gameBoard>div {
     color: white;
-    font-size: 20px;
+    font-size: 80px;
+    font-family: fantasy;
+    padding-bottom: -10px;
+    
 }
 
 .prompt {
