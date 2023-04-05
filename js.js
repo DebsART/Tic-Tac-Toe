@@ -108,3 +108,106 @@ const game =( () => {
 })();
 console.log(game.checkWinner);
 
+if (board[computerPick] == " ") {
+    board[computerPick] = `${computer.symbol}`;
+    gameFields[computerPick].textContent = "O";
+    board[computerPick] = `${computer.symbol}`;
+    setTimeout(()=> {prompt.textContent = "Player's turn"}, 600);
+    circle.play();
+} else if (board[computerPick] !== " ") {
+
+   
+    function removeCell(value, Array, computerPick) {
+        if(value == "X" || value == "O") {
+    Array.splice(computerPick, 1);
+    }}
+    board.filter(removeCell);
+     let newComputerPick = Math.floor(Math.random()* board.length);
+     board[newComputerPick] = `${computer.symbol}`;
+     gameFields[newComputerPick].textContent = "O";
+     board[newComputerPick] = `${computer.symbol}`;
+     setTimeout(()=> {prompt.textContent = "Player's turn"}, 600);
+     circle.play();
+
+};
+}
+
+console.log(computerPlay);
+
+const winningConditions = [
+[0, 1, 2],
+[3, 4, 5],
+[6, 7, 8],
+[0, 4, 8],
+[6, 4, 2],
+[0, 3, 6],
+[1, 4, 7],
+[2, 5, 8]
+
+];
+
+function checkWinner() {
+    if(Array.from(board).indexOf("X") == winningConditions[0] && winningConditions[0] == winningConditions[1] && winningConditions[1] == winningConditions[2] ){
+        prompt.textContent = "Player wins!";
+        player.score++;
+    } else if (Array.from(board).indexOf("O") == winningConditions[0] && winningConditions[0] == winningConditions[1] && winningConditions[1] == winningConditions[2] ) {
+        prompt.textContent =  "computer wins!";
+        computer.score++;
+    }
+
+    if(Array.from(board).indexOf("X") == winningConditions[3] && winningConditions[3] == winningConditions[4] && winningConditions[4] == winningConditions[5] ){
+        prompt.textContent = "Player wins!";
+        player.score++;
+    } else if (Array.from(board).indexOf("O") == winningConditions[3] && winningConditions[3] == winningConditions[4] && winningConditions[4] == winningConditions[5] ) {
+        prompt.textContent =  "computer wins!";
+        computer.score++;
+    }
+
+    if(Array.from(board).indexOf("X") == winningConditions[6] && winningConditions[6] == winningConditions[7] && winningConditions[7] == winningConditions[8] ){
+        prompt.textContent = "Player wins!";
+        player.score++;
+    } else if (Array.from(board).indexOf("O") == winningConditions[6] && winningConditions[6] == winningConditions[7] && winningConditions[7] == winningConditions[8] ) {
+        prompt.textContent =  "computer wins!";
+        computer.score++;
+    }
+
+    if(Array.from(board).indexOf("X") == winningConditions[0] && winningConditions[0] == winningConditions[4] && winningConditions[4] == winningConditions[8] ){
+        prompt.textContent = "Player wins!";
+        player.score++;
+    } else if (Array.from(board).indexOf("O") == winningConditions[0] && winningConditions[0] == winningConditions[4] && winningConditions[4] == winningConditions[8] ) {
+        prompt.textContent =  "computer wins!";
+        computer.score++;
+    }
+
+    if(Array.from(board).indexOf("X") == winningConditions[6] && winningConditions[6] == winningConditions[4] && winningConditions[4] == winningConditions[2] ){
+        prompt.textContent = "Player wins!";
+        player.score++;
+    } else if (Array.from(board).indexOf("O") == winningConditions[6] && winningConditions[6] == winningConditions[4] && winningConditions[4] == winningConditions[2] ) {
+        prompt.textContent =  "computer wins!";
+        computer.score++;
+    }
+
+    if(Array.from(board).indexOf("X") == winningConditions[0] && winningConditions[0] == winningConditions[3] && winningConditions[3] == winningConditions[6] ){
+        prompt.textContent = "Player wins!";
+        player.score++;
+    } else if (Array.from(board).indexOf("O") == winningConditions[0] && winningConditions[0] == winningConditions[3] && winningConditions[3] == winningConditions[6] ) {
+        prompt.textContent =  "computer wins!";
+        computer.score++;
+    }
+
+    if(Array.from(board).indexOf("X") == winningConditions[1] && winningConditions[1] == winningConditions[4] && winningConditions[4] == winningConditions[7] ){
+        prompt.textContent = "Player wins!";
+        player.score++;
+    } else if (Array.from(board).indexOf("O") == winningConditions[1] && winningConditions[1] == winningConditions[4] && winningConditions[4] == winningConditions[7] ) {
+        prompt.textContent =  "computer wins!";
+        computer.score++;
+    }
+
+    if(Array.from(board).indexOf("X") == winningConditions[2] && winningConditions[2] == winningConditions[5] && winningConditions[5] == winningConditions[8] ){
+        prompt.textContent = "Player wins!";
+        player.score++;
+    } else if (Array.from(board).indexOf("O") == winningConditions[2] && winningConditions[2] == winningConditions[5] && winningConditions[5] == winningConditions[8] ) {
+        prompt.textContent =  "computer wins!";
+        computer.score++;
+    }
+}
